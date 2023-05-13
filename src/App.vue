@@ -7,9 +7,9 @@ import ProductDisplay from './components/ProductDisplay.vue';
 <template>
   <header>
     <!-- card position absolute -->
-    <ProductDisplay>
-      
-    </ProductDisplay>
+    <!-- <ProductDisplay>
+
+    </ProductDisplay> -->
   </header>
 
   <main>
