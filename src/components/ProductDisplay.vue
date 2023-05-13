@@ -30,8 +30,8 @@
                 <div>
                     <h1>$29.95</h1>
                     <div class="button-container">
-                        <button class="btn-buy">Buy Now</button>
-                        <button class="btn-next">Next Product</button>
+                        <a href="https://www.github.com" class="btn-buy">Buy Now</a>
+                        <a href="" class="btn-next">Next Product</a>
                     </div>
                 </div>
             </div>
@@ -40,6 +40,7 @@
 </template>
 
 <style scope>
+    
     .button-container .btn-buy {
         margin-right: 15px;
         background-color: #720060;
