@@ -8,7 +8,8 @@ import ProductDisplay from './components/ProductDisplay.vue';
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <header>
+
+<header>
     <!-- card position absolute -->
     <ProductDisplay>
 
@@ -20,6 +21,7 @@ import ProductDisplay from './components/ProductDisplay.vue';
   </main>
   <div class="headtop-container"/>
   <div class="headbottom-container"/>
+
 </template>
 
 <style scoped>

@@ -31,13 +31,67 @@
                     <h1>$29.95</h1>
                     <div class="button-container">
                         <a href="https://www.github.com" class="btn-buy">Buy Now</a>
-                        <a href="" class="btn-next">Next Product</a>
+                        <button @click="clickedNextButton()" class="btn-next">Next Product</button>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+    import axios from "axios";
+
+    const http = axios.create({
+        baseURL: "https://fakestoreapi.com/",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+
+    export default {
+        name: "productDisplay",
+        data() {
+            return {
+                currentProduct: null,
+                message : ``,
+                id: 1
+            };
+        },
+        methods: {
+            getProduct(id) {
+                return http
+                .get(`/products/${id}`)
+                .then(res => {
+                    this.currentProduct = res.data;
+                    console.log(res.data);
+                })
+                .catch(e => {
+                    console.log(e);
+                })
+            },
+            clickedNextButton() {
+                this.id += 1;
+                console.log("clicked")
+                console.log("id = " + this.id)
+            }
+            
+        },
+        mounted() {
+            this.message = '';
+            this.getProduct(this.id);
+        }
+    }
+
+    
+
+    // const data = new EcommerceDataService();
+    // data.get(1)
+    // .then(res => {
+    //     console.log(res);
+    // })
+</script>
 
 <style scope>
     
